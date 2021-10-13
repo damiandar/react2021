@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+ import Contador from "./components/Contador";
+ import Prueba from "./components/Prueba";
+ import Lista from "./components/Lista";
+ import Formulario from "./components/Formulario";
+ import Card from "./components/Card";
+  import Propiedades from "./components/Propiedad";
 
 function App() {
+  const persona={
+    nombre:"Juan",
+    edad:24
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <h1>Hola Mundo</h1>
+      <Propiedades DNI={277777} Legajo={12345} />
+      <Card persona={persona}/>
+      <Contador />
+      <Lista/>
+      <Prueba/>
+      <Prueba/>
+      <Prueba/>
+      <Prueba/>
+      <Formulario/>
     </div>
   );
 }
