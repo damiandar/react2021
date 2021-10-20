@@ -72,3 +72,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 #TypeScript
 
 npx create-react-app my-app --template typescript
+
+#Router Dom
+
+npm install react-router-dom
+
+https://reactrouter.com/web/example/basic
+
+#Atajos
+imr
+sfc
+rafce
+
+
+https://github.com/achingachris/react-bootstrap-starter/blob/main/src/layout/Layout.js
+https://medium.com/@violetmoon/react-router-portfolio-template-3105d54f0525
+https://ichi.pro/es/consumir-una-api-rest-con-react-hooks-usando-patrones-de-diseno-51270223014405
+
+https://jasonwatmore.com/post/2020/02/01/react-fetch-http-post-request-examples
+https://medium.com/the-guild/injectable-services-in-react-de0136b6d476
+https://mattboldt.com/2020/05/02/formdata-with-react-hooks-and-fetch/
