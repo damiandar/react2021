@@ -18,23 +18,19 @@ const Formulario = () => {
         e.preventDefault(); 
         var data= JSON.stringify({ campos });
         console.log(data);
-        try {
-        fetch("http://localhost:14643/api/categorias", {
-            crossDomain:true,
+        
+        fetch("http://localhost:14643/api/categorias", { 
             method: "POST", 
-            headers: {'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*"
-                      
-            }, 
-            mode:'cors',
+            headers: {'Content-Type': 'application/json'  
+            },  
             body: JSON.stringify({ id: campos.id, descripcion: campos.descripcion }),
-          }); 
-        } 
-        catch (err) {
-          console.error("error", err);
-          alert(err.message);
-          throw new Error(err.message);
-        }
-      }
+          })
+          .catch ((err)=> {
+              console.error("error", err);
+              alert(err.message); 
+          });
+    
+    }
     /*
     useEffect(() => {
         // POST request using fetch inside useEffect React hook
