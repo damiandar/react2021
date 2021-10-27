@@ -8,6 +8,7 @@
  import { BrowserRouter as Router ,Switch,Route, Link} from "react-router-dom";
  import Footer from "./layout/Footer";
  import {Container} from "react-bootstrap"
+ import FormularioEdicion from "./components/FormularioEdicion";
 
 function App() {
   const persona={
@@ -17,21 +18,21 @@ function App() {
   return (
    
     <Router>
-            <Container>
+           
         <header>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light"> 
+          <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> 
             <Link className="navbar-brand"  to="/">Inicio</Link> 
             <Link className="navbar-brand"  to="/Contador">Contador</Link>
             <Link className="navbar-brand"  to="/Formulario">Formulario</Link>
             <Link className="navbar-brand"  to="/Listado">Listado</Link>
           </nav>
-        </header>
-        </Container>
-    <main role="main"> 
+        </header> 
+    <main role="main" className="container"> 
       <Switch>
         <Route path="/Listado"><Listado /></Route>
         <Route path="/Contador"><Contador /></Route>
         <Route path="/Formulario"><Formulario/></Route>
+        <Route path="/Formis"><FormularioEdicion/></Route>
         <Route path="/">      
           <Propiedades DNI={277777} Legajo={12345} />
           <Card persona={persona}/>

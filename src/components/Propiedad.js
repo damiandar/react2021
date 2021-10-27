@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-const Propiedades = (props) => {
+const Propiedades = (propiedades) => {
     return (  
         <Fragment>
-           <p> {props.DNI}</p>
-           <p> {props.Legajo}</p>
+           <p> {propiedades.DNI}</p>
+           <p> {propiedades.Legajo}</p>
         </Fragment>
     );
 }

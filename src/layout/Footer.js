@@ -4,7 +4,7 @@ const Footer = () => {
     const year = new Date().getFullYear();
     return (
         <Fragment> 
-            <footer className='text-center text-capitalize'>
+            <footer className='footer text-center text-capitalize'>
                 copyright react bootstrap starter &copy; {year}
             </footer> 
         </Fragment>

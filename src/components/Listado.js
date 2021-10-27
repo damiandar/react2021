@@ -1,8 +1,20 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react'; 
+//import ModalCategoria from './ModalCategoria';
+import { useHistory } from "react-router-dom";
 
 const Listado = () => {
     const [todos, setTodos] = useState([]);
-  
+    //const [modal, setModal] = useState(false);
+    let history = useHistory();
+
+    const seleccionarCategoria=(categ, caso)=>{
+        //setModal(true); 
+        //history.push("/Formis/" + categ.id );
+        history.push("/Formis?id=" + categ.id );
+        //(caso==='Editar')?setModalEditar(true):setModalEliminar(true)
+        console.log(categ);
+    }
+
     useEffect(() => {
       fetch("http://localhost:14643/api/categorias")
         .then(async (response) => {
@@ -22,7 +34,10 @@ const Listado = () => {
 
     return (
         <div>
-
+            {
+            //<ModalCategoria show={modal} />
+            }
+          
             <table className="table">
                 <thead>
                     <tr>
@@ -31,8 +46,14 @@ const Listado = () => {
                 </thead>
                 <tbody>
                 {   
-                    todos.map((item) => {
-                        return <tr key={item.id}><td> {item.id}</td><td> {item.descripcion}</td></tr>
+                    todos.map((cat) => {
+                        return <tr key={cat.id}>
+                                <td> {cat.id}</td>
+                                <td> {cat.descripcion}</td>
+                                <td><button  className="btn btn-primary" 
+                                    onClick={()=>seleccionarCategoria(cat, 'Editar')}>Editar</button>
+                                </td>
+                            </tr>
                     }) 
                 }
                 </tbody>
