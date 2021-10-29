@@ -19,7 +19,7 @@ export default function Radio() {
             items.map(item => 
                 (
                   <Fragment>
-                  <input type="radio" key={item.value} value={item.value}/>
+                  <input type="radio" key={item.value} value={item.value} checked={valor === item.value} />
                   <label>  {item.value}</label>                  
                   </Fragment>
                 )
