@@ -14,7 +14,7 @@ export default function Combo() {
   return (
     <div className="App">
         <h1>Combo</h1>
-        <select onChange={e => setValor(e.currentTarget.value)}>
+        <select onChange={e => setValor(e.currentTarget.value)}  multiple size="4">
         {
             items.map(item => 
                 (<option key={item.value} value={item.value}>
